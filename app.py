@@ -23,8 +23,13 @@ class Model():
     self.species_classifier = SpeciesClassifier.build_species_classifier(kwargs["species_classifier"])
     self.output_path = output_path
 
-    self.model_path = "models/sharktrack.pt"
-
+    # Original SharkTrack model
+    # self.model_path = "models/sharktrack.pt"
+    
+    # Evolved SharkTrack model domain adapted to harsh lighting conditions and turbid waters
+    self.model_path = "models/sharktrack-evolved.pt"
+    
+    
     self.model_args = {
       "conf": kwargs["conf"],
       "iou": 0.5,
